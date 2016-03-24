@@ -1,9 +1,9 @@
 package C_test
 
 import (
-	. "github.com/onsi/ginkgo/integration/_fixtures/watch_fixtures/C"
+	. "github.com/getbread/ginkgo/integration/_fixtures/watch_fixtures/C"
 
-	. "github.com/onsi/ginkgo"
+	. "github.com/getbread/ginkgo"
 	. "github.com/onsi/gomega"
 )
 

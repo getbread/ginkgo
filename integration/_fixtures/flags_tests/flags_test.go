@@ -3,10 +3,11 @@ package flags_test
 import (
 	"flag"
 	"fmt"
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/integration/_fixtures/flags_tests"
-	. "github.com/onsi/gomega"
 	"time"
+
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/integration/_fixtures/flags_tests"
+	. "github.com/onsi/gomega"
 )
 
 var customFlag string

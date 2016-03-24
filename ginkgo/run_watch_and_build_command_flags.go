@@ -4,7 +4,7 @@ import (
 	"flag"
 	"runtime"
 
-	"github.com/onsi/ginkgo/config"
+	"github.com/getbread/ginkgo/config"
 )
 
 type RunWatchAndBuildCommandFlags struct {
@@ -27,6 +27,7 @@ type RunWatchAndBuildCommandFlags struct {
 	KeepGoing       bool
 	UntilItFails    bool
 	RandomizeSuites bool
+	WithRetries     bool
 
 	//only for watch command
 	Depth int
@@ -113,6 +114,7 @@ func (c *RunWatchAndBuildCommandFlags) flags(mode int) {
 		c.FlagSet.BoolVar(&(c.KeepGoing), "keepGoing", false, "When true, failures from earlier test suites do not prevent later test suites from running")
 		c.FlagSet.BoolVar(&(c.UntilItFails), "untilItFails", false, "When true, Ginkgo will keep rerunning tests until a failure occurs")
 		c.FlagSet.BoolVar(&(c.RandomizeSuites), "randomizeSuites", false, "When true, Ginkgo will randomize the order in which test suites run")
+		c.FlagSet.BoolVar(&(c.WithRetries), "withRetries", false, "When true, Ginkgo will run up to 2 retries on the test if it does not pass")
 	}
 
 	if mode == watchMode {

@@ -3,19 +3,19 @@ package suite_test
 import (
 	"bytes"
 
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/internal/suite"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/internal/suite"
 	. "github.com/onsi/gomega"
 
 	"math/rand"
 	"time"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/internal/codelocation"
-	Failer "github.com/onsi/ginkgo/internal/failer"
-	Writer "github.com/onsi/ginkgo/internal/writer"
-	"github.com/onsi/ginkgo/reporters"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/config"
+	"github.com/getbread/ginkgo/internal/codelocation"
+	Failer "github.com/getbread/ginkgo/internal/failer"
+	Writer "github.com/getbread/ginkgo/internal/writer"
+	"github.com/getbread/ginkgo/reporters"
+	"github.com/getbread/ginkgo/types"
 )
 
 var _ = Describe("Suite", func() {

@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/ginkgo/testsuite"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/ginkgo/testsuite"
 	. "github.com/onsi/gomega"
 )
 
@@ -54,13 +54,13 @@ var _ = Describe("TestSuite", func() {
 		writeFile("/professorplum", "professorplum_test.go", `import "testing"`, 0666)
 
 		//ginkgo tests in a nested directory
-		writeFile("/colonelmustard", "colonelmustard_test.go", `import "github.com/onsi/ginkgo"`, 0666)
+		writeFile("/colonelmustard", "colonelmustard_test.go", `import "github.com/getbread/ginkgo"`, 0666)
 
 		//ginkgo tests in a deeply nested directory
-		writeFile("/colonelmustard/library", "library_test.go", `import "github.com/onsi/ginkgo"`, 0666)
+		writeFile("/colonelmustard/library", "library_test.go", `import "github.com/getbread/ginkgo"`, 0666)
 
 		//ginkgo tests deeply nested in a vendored dependency
-		writeFile("/vendor/mrspeacock/lounge", "lounge_test.go", `import "github.com/onsi/ginkgo"`, 0666)
+		writeFile("/vendor/mrspeacock/lounge", "lounge_test.go", `import "github.com/getbread/ginkgo"`, 0666)
 
 		//a precompiled ginkgo test
 		writeFile("/precompiled-dir", "precompiled.test", `fake-binary-file`, 0777)

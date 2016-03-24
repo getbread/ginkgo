@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	. "github.com/onsi/ginkgo"
+	. "github.com/getbread/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/gexec"
 
@@ -25,7 +25,7 @@ func TestIntegration(t *testing.T) {
 }
 
 var _ = SynchronizedBeforeSuite(func() []byte {
-	pathToGinkgo, err := gexec.Build("github.com/onsi/ginkgo/ginkgo")
+	pathToGinkgo, err := gexec.Build("github.com/getbread/ginkgo/ginkgo")
 	Ω(err).ShouldNot(HaveOccurred())
 	return []byte(pathToGinkgo)
 }, func(computedPathToGinkgo []byte) {

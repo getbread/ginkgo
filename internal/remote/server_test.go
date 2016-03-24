@@ -1,13 +1,13 @@
 package remote_test
 
 import (
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/internal/remote"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/internal/remote"
 	. "github.com/onsi/gomega"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/reporters"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/config"
+	"github.com/getbread/ginkgo/reporters"
+	"github.com/getbread/ginkgo/types"
 
 	"bytes"
 	"encoding/json"

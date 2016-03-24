@@ -1,14 +1,15 @@
 package remote_test
 
 import (
-	. "github.com/onsi/ginkgo"
+	. "github.com/getbread/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/onsi/ginkgo/config"
-	. "github.com/onsi/ginkgo/internal/remote"
-	st "github.com/onsi/ginkgo/reporters/stenographer"
-	"github.com/onsi/ginkgo/types"
 	"time"
+
+	"github.com/getbread/ginkgo/config"
+	. "github.com/getbread/ginkgo/internal/remote"
+	st "github.com/getbread/ginkgo/reporters/stenographer"
+	"github.com/getbread/ginkgo/types"
 )
 
 var _ = Describe("Aggregator", func() {

@@ -3,14 +3,14 @@ package spec_test
 import (
 	"math/rand"
 
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/internal/spec"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/internal/spec"
 	. "github.com/onsi/gomega"
 
-	"github.com/onsi/ginkgo/internal/codelocation"
-	"github.com/onsi/ginkgo/internal/containernode"
-	"github.com/onsi/ginkgo/internal/leafnodes"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/internal/codelocation"
+	"github.com/getbread/ginkgo/internal/containernode"
+	"github.com/getbread/ginkgo/internal/leafnodes"
+	"github.com/getbread/ginkgo/types"
 )
 
 var _ = Describe("Specs", func() {

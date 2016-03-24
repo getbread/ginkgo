@@ -1,11 +1,12 @@
 package codelocation_test
 
 import (
-	. "github.com/onsi/ginkgo"
-	"github.com/onsi/ginkgo/internal/codelocation"
-	"github.com/onsi/ginkgo/types"
-	. "github.com/onsi/gomega"
 	"runtime"
+
+	. "github.com/getbread/ginkgo"
+	"github.com/getbread/ginkgo/internal/codelocation"
+	"github.com/getbread/ginkgo/types"
+	. "github.com/onsi/gomega"
 )
 
 var _ = Describe("CodeLocation", func() {
@@ -48,9 +49,9 @@ var _ = Describe("CodeLocation", func() {
 Skip: skip()
 /Skip/me
 Skip: skip()
-/Users/whoever/gospace/src/github.com/onsi/ginkgo/whatever.go:10 (0x12314)
+/Users/whoever/gospace/src/github.com/getbread/ginkgo/whatever.go:10 (0x12314)
 Something: Func()
-/Users/whoever/gospace/src/github.com/onsi/ginkgo/whatever_else.go:10 (0x12314)
+/Users/whoever/gospace/src/github.com/getbread/ginkgo/whatever_else.go:10 (0x12314)
 SomethingInternalToGinkgo: Func()
 /usr/goroot/pkg/strings/oops.go:10 (0x12341)
 Oops: BlowUp()

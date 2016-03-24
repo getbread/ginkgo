@@ -3,7 +3,7 @@ package table
 import (
 	"reflect"
 
-	"github.com/onsi/ginkgo"
+	"github.com/getbread/ginkgo"
 )
 
 /*

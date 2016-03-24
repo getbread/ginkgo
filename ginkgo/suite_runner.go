@@ -5,10 +5,10 @@ import (
 	"runtime"
 	"sync"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/ginkgo/interrupthandler"
-	"github.com/onsi/ginkgo/ginkgo/testrunner"
-	"github.com/onsi/ginkgo/ginkgo/testsuite"
+	"github.com/getbread/ginkgo/config"
+	"github.com/getbread/ginkgo/ginkgo/interrupthandler"
+	"github.com/getbread/ginkgo/ginkgo/testrunner"
+	"github.com/getbread/ginkgo/ginkgo/testsuite"
 )
 
 type compilationInput struct {
@@ -112,7 +112,7 @@ func (r *SuiteRunner) compileInParallel(runners []*testrunner.TestRunner, numCom
 	return compilationOutputs
 }
 
-func (r *SuiteRunner) RunSuites(runners []*testrunner.TestRunner, numCompilers int, keepGoing bool, willCompile func(suite testsuite.TestSuite)) (testrunner.RunResult, int) {
+func (r *SuiteRunner) RunSuites(runners []*testrunner.TestRunner, numCompilers int, keepGoing bool, withRetries bool, willCompile func(suite testsuite.TestSuite)) (testrunner.RunResult, int) {
 	runResult := testrunner.PassingRunResult()
 
 	compilationOutputs := r.compileInParallel(runners, numCompilers, willCompile)
@@ -123,13 +123,24 @@ func (r *SuiteRunner) RunSuites(runners []*testrunner.TestRunner, numCompilers i
 		if compilationOutput.err != nil {
 			fmt.Print(compilationOutput.err.Error())
 		}
+		retryAttempts := 0
+		if withRetries {
+			retryAttempts = 2
+		}
 		numSuitesThatRan++
 		suiteRunResult := testrunner.FailingRunResult()
 		if compilationOutput.err == nil {
-			suiteRunResult = compilationOutput.runner.Run()
+			for retryAttempt := 0; retryAttempt < (1 + retryAttempts); retryAttempt += 1 {
+				suiteRunResult = compilationOutput.runner.Run()
+				if suiteRunResult.Passed {
+					break
+				}
+			}
 		}
 		r.notifier.SendSuiteCompletionNotification(compilationOutput.runner.Suite, suiteRunResult.Passed)
 		r.notifier.RunCommand(compilationOutput.runner.Suite, suiteRunResult.Passed)
+
+		// Once all retries are complete, process results
 		runResult = runResult.Merge(suiteRunResult)
 		if !suiteRunResult.Passed {
 			suitesThatFailed = append(suitesThatFailed, compilationOutput.runner.Suite)

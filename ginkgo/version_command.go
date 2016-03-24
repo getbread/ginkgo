@@ -3,7 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/onsi/ginkgo/config"
+
+	"github.com/getbread/ginkgo/config"
 )
 
 func BuildVersionCommand() *Command {

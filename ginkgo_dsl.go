@@ -5,7 +5,7 @@ The godoc documentation describes Ginkgo's API.  More comprehensive documentatio
 
 Ginkgo's preferred matcher library is [Gomega](http://github.com/onsi/gomega)
 
-Ginkgo on Github: http://github.com/onsi/ginkgo
+Ginkgo on Github: http://github.com/getbread/ginkgo
 
 Ginkgo is MIT-Licensed
 */
@@ -20,16 +20,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/internal/codelocation"
-	"github.com/onsi/ginkgo/internal/failer"
-	"github.com/onsi/ginkgo/internal/remote"
-	"github.com/onsi/ginkgo/internal/suite"
-	"github.com/onsi/ginkgo/internal/testingtproxy"
-	"github.com/onsi/ginkgo/internal/writer"
-	"github.com/onsi/ginkgo/reporters"
-	"github.com/onsi/ginkgo/reporters/stenographer"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/config"
+	"github.com/getbread/ginkgo/internal/codelocation"
+	"github.com/getbread/ginkgo/internal/failer"
+	"github.com/getbread/ginkgo/internal/remote"
+	"github.com/getbread/ginkgo/internal/suite"
+	"github.com/getbread/ginkgo/internal/testingtproxy"
+	"github.com/getbread/ginkgo/internal/writer"
+	"github.com/getbread/ginkgo/reporters"
+	"github.com/getbread/ginkgo/reporters/stenographer"
+	"github.com/getbread/ginkgo/types"
 )
 
 const GINKGO_VERSION = config.VERSION

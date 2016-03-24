@@ -11,7 +11,7 @@ import (
 
 	"go/build"
 
-	"github.com/onsi/ginkgo/ginkgo/nodot"
+	"github.com/getbread/ginkgo/ginkgo/nodot"
 )
 
 func BuildBootstrapCommand() *Command {
@@ -128,12 +128,12 @@ func generateBootstrap(agouti bool, noDot bool) {
 	data := bootstrapData{
 		Package:       packageName,
 		FormattedName: formattedName,
-		GinkgoImport:  `. "github.com/onsi/ginkgo"`,
+		GinkgoImport:  `. "github.com/getbread/ginkgo"`,
 		GomegaImport:  `. "github.com/onsi/gomega"`,
 	}
 
 	if noDot {
-		data.GinkgoImport = `"github.com/onsi/ginkgo"`
+		data.GinkgoImport = `"github.com/getbread/ginkgo"`
 		data.GomegaImport = `"github.com/onsi/gomega"`
 	}
 

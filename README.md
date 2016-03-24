@@ -1,6 +1,6 @@
 ![Ginkgo: A Golang BDD Testing Framework](http://onsi.github.io/ginkgo/images/ginkgo.png)
 
-[![Build Status](https://travis-ci.org/onsi/ginkgo.png)](https://travis-ci.org/onsi/ginkgo)
+[![Build Status](https://travis-ci.org/getbread/ginkgo.png)](https://travis-ci.org/getbread/ginkgo)
 
 Jump to the [docs](http://onsi.github.io/ginkgo/) to learn more.  To start rolling your Ginkgo tests *now* [keep reading](#set-me-up)!
 
@@ -41,7 +41,7 @@ To discuss Ginkgo and get updates, join the [google group](https://groups.google
 
 - Built-in support for [benchmarking](http://onsi.github.io/ginkgo/#benchmark-tests) your code.  Control the number of benchmark samples as you gather runtimes and other, arbitrary, bits of numerical information about your code. 
 
-- [Completions for Sublime Text](https://github.com/onsi/ginkgo-sublime-completions): just use [Package Control](https://sublime.wbond.net/) to install `Ginkgo Completions`.
+- [Completions for Sublime Text](https://github.com/getbread/ginkgo-sublime-completions): just use [Package Control](https://sublime.wbond.net/) to install `Ginkgo Completions`.
 
 - Straightforward support for third-party testing libraries such as [Gomock](https://code.google.com/p/gomock/) and [Testify](https://github.com/stretchr/testify).  Check out the [docs](http://onsi.github.io/ginkgo/#third-party-integrations) for details.
 
@@ -63,7 +63,7 @@ You'll need Golang v1.3+ (Ubuntu users: you probably have Golang v1.0 -- you'll 
 
 ```bash
 
-go get github.com/onsi/ginkgo/ginkgo  # installs the ginkgo CLI
+go get github.com/getbread/ginkgo/ginkgo  # installs the ginkgo CLI
 go get github.com/onsi/gomega         # fetches the matcher library
 
 cd path/to/package/you/want/to/test
@@ -79,7 +79,7 @@ ginkgo  # also runs your tests
 
 ## I'm new to Go: What are my testing options?
 
-Of course, I heartily recommend [Ginkgo](https://github.com/onsi/ginkgo) and [Gomega](https://github.com/onsi/gomega).  Both packages are seeing heavy, daily, production use on a number of projects and boast a mature and comprehensive feature-set.
+Of course, I heartily recommend [Ginkgo](https://github.com/getbread/ginkgo) and [Gomega](https://github.com/onsi/gomega).  Both packages are seeing heavy, daily, production use on a number of projects and boast a mature and comprehensive feature-set.
 
 With that said, it's great to know what your options are :)
 
@@ -100,7 +100,7 @@ You can also use Ginkgo's matcher library [Gomega](https://github.com/onsi/gomeg
 
 There are a handful of BDD-style testing frameworks written for Golang.  Here are a few:
 
-- [Ginkgo](https://github.com/onsi/ginkgo) ;)
+- [Ginkgo](https://github.com/getbread/ginkgo) ;)
 - [GoConvey](https://github.com/smartystreets/goconvey) 
 - [Goblin](https://github.com/franela/goblin)
 - [Mao](https://github.com/azer/mao)

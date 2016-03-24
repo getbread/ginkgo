@@ -1,17 +1,17 @@
 package leafnodes_test
 
 import (
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/internal/leafnodes"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/internal/leafnodes"
 	. "github.com/onsi/gomega"
 
 	"reflect"
 	"runtime"
 	"time"
 
-	"github.com/onsi/ginkgo/internal/codelocation"
-	Failer "github.com/onsi/ginkgo/internal/failer"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/internal/codelocation"
+	Failer "github.com/getbread/ginkgo/internal/failer"
+	"github.com/getbread/ginkgo/types"
 )
 
 type runnable interface {

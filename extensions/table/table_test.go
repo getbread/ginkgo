@@ -3,9 +3,9 @@ package table_test
 import (
 	"strings"
 
-	. "github.com/onsi/ginkgo/extensions/table"
+	. "github.com/getbread/ginkgo/extensions/table"
 
-	. "github.com/onsi/ginkgo"
+	. "github.com/getbread/ginkgo"
 	. "github.com/onsi/gomega"
 )
 

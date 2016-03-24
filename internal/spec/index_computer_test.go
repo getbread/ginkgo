@@ -1,8 +1,8 @@
 package spec_test
 
 import (
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/ginkgo/internal/spec"
+	. "github.com/getbread/ginkgo"
+	. "github.com/getbread/ginkgo/internal/spec"
 	. "github.com/onsi/gomega"
 )
 

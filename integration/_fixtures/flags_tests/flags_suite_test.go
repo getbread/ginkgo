@@ -1,7 +1,7 @@
 package flags_test
 
 import (
-	. "github.com/onsi/ginkgo"
+	. "github.com/getbread/ginkgo"
 	. "github.com/onsi/gomega"
 
 	"testing"

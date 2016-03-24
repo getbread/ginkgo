@@ -6,8 +6,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/onsi/ginkgo/config"
-	"github.com/onsi/ginkgo/types"
+	"github.com/getbread/ginkgo/config"
+	"github.com/getbread/ginkgo/types"
 )
 
 //An interface to net/http's client to allow the injection of fakes under test
